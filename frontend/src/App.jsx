@@ -23,9 +23,9 @@ export default function App() {
       </section>
 
       {/* Experience Section */}
-      {/* <section id="experience">
+      <section id="experience">
         <Experience />
-      </section> */}
+      </section>
 
       {/* Projects Section */}
       <section id="projects">

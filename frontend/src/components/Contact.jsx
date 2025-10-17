@@ -9,11 +9,11 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm(    
-        "service_a344lj9",       // e.g. service_abc123
-        "template_e56cpkm",      // e.g. template_xyz456
+      .sendForm(
+        "service_a344lj9",      // Your EmailJS service ID
+        "template_e56cpkm",     // Your EmailJS template ID
         form.current,
-        "mJpHHi21maCuCpwDu"        // e.g. Gm5hjKx9zABCdef
+        "mJpHHi21maCuCpwDu"     // Your EmailJS public key
       )
       .then(
         (result) => {
@@ -69,14 +69,18 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <form ref={form} onSubmit={sendEmail} className="bg-white rounded-2xl shadow p-8 space-y-4">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="bg-white rounded-2xl shadow p-8 space-y-4"
+        >
           <div>
             <label className="block text-gray-700 font-medium mb-1">
               Your Name
             </label>
             <input
               type="text"
-              name="user_name"
+              name="from_name"  // <-- Updated for EmailJS
               placeholder="John Doe"
               className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
               required
@@ -89,7 +93,7 @@ export default function Contact() {
             </label>
             <input
               type="email"
-              name="user_email"
+              name="from_email" // <-- Updated for EmailJS
               placeholder="john@example.com"
               className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
               required

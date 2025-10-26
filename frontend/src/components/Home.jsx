@@ -10,7 +10,7 @@ export default function Home() {
       <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-2">
         Abhilasha <span className="text-blue-600">Lahare</span>
       </h1>
-      <h2 className="text-2xl font-semibold text-gray-700 mb-6">Aspiring Web Developer</h2>
+      <h2 className="text-2xl font-semibold text-gray-700 mb-6">Full Stack Web Developer</h2>
 
       <p className="max-w-2xl text-lg text-gray-600 mb-6">
         Building seamless digital experiences with <strong>React</strong>, <strong>Node.js</strong>, 
